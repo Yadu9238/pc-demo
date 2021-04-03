@@ -1,0 +1,44 @@
+<html>
+<style>
+body {
+  background-image: url({{ url_for('static', filename='images/page2.jpg') }} );
+}
+</style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='stylesheets/style2.css') }}" />
+        <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+	<body>
+	
+            <div class="perspective-text">
+                <div class="perspective-line">
+                  <p></p>
+                  <p>THE</p>
+                </div>
+                <div class="perspective-line">
+                  <p>Posture</p>
+                </div>
+                <div class="perspective-line">
+                  <p>Corrector  </p>
+                </div>
+              </div>
+              <div class="bg-text">
+                  <img src="{{pic}}" height="300px" width="300px"/>
+            	<div class = "tb">
+		<table border="1" align = "center" cellspacing = "1" cellpadding = "6" style="font-family:Georgia;color:white;position:absolute;top:40%;left:50%;">
+   	
+    		<tbody>
+        	{% for record in records %}
+        	<tr>
+		{% for r in record %}
+
+           	 <td>{{ r }}</td>
+		{% endfor %}
+            
+       	 </tr>
+        {% endfor %}
+    </tbody>
+		</div></div> 
+    </body>
+</html>
